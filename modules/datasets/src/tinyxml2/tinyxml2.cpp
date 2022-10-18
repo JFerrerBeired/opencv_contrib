@@ -461,11 +461,11 @@ bool XMLUtil::ToBool( const char* str, bool* value )
         *value = (ival==0) ? false : true;
         return true;
     }
-    if ( StringEqual( str, "true" ) ) {
+    if ( StringEqual( str, "true", strlen("true")+1 ) ) {
         *value = true;
         return true;
     }
-    else if ( StringEqual( str, "false" ) ) {
+    else if ( StringEqual( str, "false", strlen("false")+1 ) ) {
         *value = false;
         return true;
     }
